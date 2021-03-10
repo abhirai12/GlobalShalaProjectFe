@@ -1,0 +1,23 @@
+
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  th{
+    font-weight:800 !important;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+  }
+  td, th {
+    width: 5%;
+  }
+  .imgTbl{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 5px 5px 5px 0px;
+    display: table-cell;
+  }
+  

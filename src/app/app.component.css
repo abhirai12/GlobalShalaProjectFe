@@ -1,0 +1,11 @@
+.tableList{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+    .tableList{
+        width: 100%;
+        
+    }
+  }
