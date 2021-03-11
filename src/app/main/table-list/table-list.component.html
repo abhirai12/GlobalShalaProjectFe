@@ -18,51 +18,58 @@
     </td>
   </ng-container>
 
-  <!-- Position Column -->
+  <!-- Id Column -->
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
   </ng-container>
 
-  <!-- Name Column -->
+  <!-- First Name Column -->
   <ng-container matColumnDef="first_name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name </th>
     <td mat-cell *matCellDef="let element"> {{element.first_name}} </td>
   </ng-container>
 
-  <!-- Weight Column -->
+  <!-- Last Name Column -->
   <ng-container matColumnDef="last_name">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
     <td mat-cell *matCellDef="let element"> {{element.last_name}} </td>
   </ng-container>
 
-  <!-- Symbol Column -->
+  <!-- Email Column -->
   <ng-container matColumnDef="email">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
     <td mat-cell *matCellDef="let element"> {{element.email}} </td>
   </ng-container>
-  <!-- profile Column -->
- 
+
+  <!-- Image Column -->
   <ng-container matColumnDef="avatar">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Profile </th>
     <td class="tblimg" mat-cell *matCellDef="let element" > <img class="imgTbl" src={{element.avatar}} alt="img"></td>
   </ng-container>
-   <!-- Star Column -->
-   <ng-container matColumnDef="action" stickyEnd>
-    <th mat-header-cell *matHeaderCellDef>Action</th>
-    <td mat-cell *matCellDef="let element ; let i = index">
+
+   <!-- Action Column -->
+   <ng-container matColumnDef="Action" stickyEnd>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+    <td mat-cell *matCellDef="let element ; let i = index" >
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="profile(i)">
+      <!-- dropdown menu -->
+        <!-- user profile menu -->
+      <mat-menu #menu="matMenu" >
+        <button mat-menu-item (click)="profile(element.id)">
           <mat-icon>person</mat-icon>
           <span>User Profile</span>
         </button>
+
+        <!-- work menu -->
         <button mat-menu-item  (click)="work(i)">
           <mat-icon>work</mat-icon>
           <span>Work</span>
         </button>
+
+        <!-- contacts -->
         <button mat-menu-item (click)="con(i)">
           <mat-icon>phone_paused</mat-icon>
           <span>Contacts</span>
